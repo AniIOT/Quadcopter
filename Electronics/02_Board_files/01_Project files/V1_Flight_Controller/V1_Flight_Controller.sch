@@ -10736,7 +10736,7 @@ You are welcome to use this library for commercial purposes. For attribution, we
 </plain>
 <instances>
 <instance part="SJR1" gate="G$1" x="5.08" y="2.54" smashed="yes">
-<attribute name="NAME" x="-5.08" y="15.24" size="1.27" layer="94"/>
+<attribute name="NAME" x="-5.08" y="15.24" size="1.27" layer="94" font="vector"/>
 </instance>
 </instances>
 <busses>
@@ -10756,6 +10756,35 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <label x="17.78" y="-7.62" size="0.8128" layer="95" font="vector" xref="yes"/>
 </segment>
 </net>
+<net name="RST" class="0">
+<segment>
+<pinref part="SJR1" gate="G$1" pin="REST"/>
+<wire x1="-17.78" y1="10.16" x2="-20.32" y2="10.16" width="0.1524" layer="91"/>
+<label x="-20.32" y="10.16" size="0.8128" layer="95" font="vector" rot="R180" xref="yes"/>
+</segment>
+</net>
+</nets>
+</sheet>
+<sheet>
+<description>Power Section</description>
+<plain>
+</plain>
+<instances>
+</instances>
+<busses>
+</busses>
+<nets>
+</nets>
+</sheet>
+<sheet>
+<description>Motor Driver</description>
+<plain>
+</plain>
+<instances>
+</instances>
+<busses>
+</busses>
+<nets>
 </nets>
 </sheet>
 </sheets>
