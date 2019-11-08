@@ -275,6 +275,9 @@ UsedLibrary="C:/Users/Aniruddha/Desktop/GIT/Quadcopter/Electronics/02_Board_file
 UsedLibrary="C:/Users/Aniruddha/Desktop/GIT/Quadcopter/Electronics/02_Board_files/00_Libraries_used/FS8205A.lbr"
 UsedLibrary="C:/Users/Aniruddha/Desktop/GIT/Quadcopter/Electronics/02_Board_files/00_Libraries_used/con-molex-usb.lbr"
 UsedLibrary="C:/Users/Aniruddha/Desktop/GIT/Quadcopter/Electronics/02_Board_files/00_Libraries_used/con-jst.lbr"
+UsedLibrary="C:/Users/Aniruddha/Desktop/GIT/Quadcopter/Electronics/02_Board_files/00_Libraries_used/smd-footprints.lbr"
+UsedLibrary="C:/Users/Aniruddha/Desktop/GIT/Quadcopter/Electronics/02_Board_files/00_Libraries_used/SRN2009T-2R2M.lbr"
+UsedLibrary="C:/Users/Aniruddha/Desktop/GIT/Quadcopter/Electronics/02_Board_files/00_Libraries_used/SS310-SCHOTTKY.lbr"
 
 [Win_1]
 Type="Control Panel"
