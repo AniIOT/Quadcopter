@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE eagle SYSTEM "eagle.dtd">
-<eagle version="9.5.1">
+<eagle version="9.4.2">
 <drawing>
 <settings>
 <setting alwaysvectorfont="no"/>
@@ -15444,8 +15444,6 @@ Source: http://www.diodes.com/datasheets/ds23001.pdf</description>
 <part name="R201" library="adafruit" deviceset="R-US_" device="R0603"/>
 <part name="D201" library="adafruit" deviceset="LED" device="CHIPLED_0603" value="GREEN_LED"/>
 <part name="L201" library="SRN2009T-2R2M" deviceset="SRN2009T-2R2M" device=""/>
-<part name="TP_BUCK_VIN" library="testpad" library_urn="urn:adsk.eagle:library:385" deviceset="TP" device="B1,27" package3d_urn="urn:adsk.eagle:package:27944/2"/>
-<part name="TP_3V3" library="testpad" library_urn="urn:adsk.eagle:library:385" deviceset="TP" device="B1,27" package3d_urn="urn:adsk.eagle:package:27944/2"/>
 <part name="GND1" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
 <part name="GND2" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
 <part name="GND3" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
@@ -15485,14 +15483,6 @@ Source: http://www.diodes.com/datasheets/ds23001.pdf</description>
 <attribute name="NAME" x="127" y="116.84" size="1.778" layer="94"/>
 <attribute name="VALUE" x="127" y="109.22" size="1.778" layer="94"/>
 </instance>
-<instance part="TP_BUCK_VIN" gate="G$1" x="96.52" y="116.84" smashed="yes">
-<attribute name="NAME" x="95.25" y="118.11" size="1.778" layer="95"/>
-<attribute name="TP_SIGNAL_NAME" x="97.79" y="115.57" size="1.778" layer="97"/>
-</instance>
-<instance part="TP_3V3" gate="G$1" x="157.48" y="116.84" smashed="yes">
-<attribute name="NAME" x="156.21" y="118.11" size="1.778" layer="95"/>
-<attribute name="TP_SIGNAL_NAME" x="158.75" y="115.57" size="1.778" layer="97"/>
-</instance>
 <instance part="GND1" gate="1" x="147.32" y="101.6" smashed="yes">
 <attribute name="VALUE" x="144.78" y="99.06" size="1.778" layer="96"/>
 </instance>
@@ -15529,7 +15519,6 @@ Source: http://www.diodes.com/datasheets/ds23001.pdf</description>
 <wire x1="157.48" y1="114.3" x2="162.56" y2="114.3" width="0.1524" layer="91"/>
 <junction x="157.48" y="114.3"/>
 <pinref part="L201" gate="G$1" pin="2"/>
-<pinref part="TP_3V3" gate="G$1" pin="TP"/>
 </segment>
 </net>
 <net name="VIN" class="0">
@@ -15538,14 +15527,11 @@ Source: http://www.diodes.com/datasheets/ds23001.pdf</description>
 <pinref part="U201" gate="G$1" pin="VIN"/>
 <wire x1="99.06" y1="109.22" x2="99.06" y2="114.3" width="0.1524" layer="91"/>
 <pinref part="C201" gate="G$1" pin="1"/>
-<wire x1="93.98" y1="114.3" x2="96.52" y2="114.3" width="0.1524" layer="91"/>
 <junction x="99.06" y="114.3"/>
-<wire x1="96.52" y1="114.3" x2="99.06" y2="114.3" width="0.1524" layer="91"/>
+<wire x1="93.98" y1="114.3" x2="99.06" y2="114.3" width="0.1524" layer="91"/>
 <wire x1="93.98" y1="114.3" x2="91.44" y2="114.3" width="0.1524" layer="91"/>
 <junction x="93.98" y="114.3"/>
 <label x="91.44" y="114.3" size="0.8128" layer="95" font="vector" rot="R180" xref="yes"/>
-<pinref part="TP_BUCK_VIN" gate="G$1" pin="TP"/>
-<junction x="96.52" y="114.3"/>
 </segment>
 </net>
 <net name="LED_3V3" class="0">
@@ -15610,7 +15596,6 @@ Source: http://www.diodes.com/datasheets/ds23001.pdf</description>
 <part name="GND4" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
 <part name="GND3" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
 <part name="TP_5V" library="testpad" library_urn="urn:adsk.eagle:library:385" deviceset="TP" device="B1,27" package3d_urn="urn:adsk.eagle:package:27944/2"/>
-<part name="TP_B+" library="testpad" library_urn="urn:adsk.eagle:library:385" deviceset="TP" device="B1,27" package3d_urn="urn:adsk.eagle:package:27944/2"/>
 </parts>
 <sheets>
 <sheet>
@@ -15691,10 +15676,6 @@ Source: http://www.diodes.com/datasheets/ds23001.pdf</description>
 <instance part="TP_5V" gate="G$1" x="91.44" y="139.7" smashed="yes">
 <attribute name="NAME" x="90.17" y="140.97" size="1.778" layer="95"/>
 <attribute name="TP_SIGNAL_NAME" x="92.71" y="138.43" size="1.778" layer="97"/>
-</instance>
-<instance part="TP_B+" gate="G$1" x="121.92" y="111.76" smashed="yes" rot="R180">
-<attribute name="NAME" x="123.19" y="110.49" size="1.778" layer="95" rot="R180"/>
-<attribute name="TP_SIGNAL_NAME" x="120.65" y="113.03" size="1.778" layer="97" rot="R180"/>
 </instance>
 </instances>
 <busses>
@@ -15793,11 +15774,8 @@ Source: http://www.diodes.com/datasheets/ds23001.pdf</description>
 <net name="B+" class="0">
 <segment>
 <pinref part="U101" gate="G$1" pin="BAT"/>
-<wire x1="119.38" y1="114.3" x2="121.92" y2="114.3" width="0.1524" layer="91"/>
 <label x="124.46" y="114.3" size="0.8128" layer="95" font="vector" xref="yes"/>
-<pinref part="TP_B+" gate="G$1" pin="TP"/>
-<wire x1="121.92" y1="114.3" x2="124.46" y2="114.3" width="0.1524" layer="91"/>
-<junction x="121.92" y="114.3"/>
+<wire x1="119.38" y1="114.3" x2="124.46" y2="114.3" width="0.1524" layer="91"/>
 </segment>
 <segment>
 <pinref part="R104" gate="G$1" pin="2"/>
