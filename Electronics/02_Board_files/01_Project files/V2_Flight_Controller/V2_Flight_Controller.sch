@@ -20029,7 +20029,7 @@ Typical applications:&lt;p&gt;
 <part name="C102" library="adafruit" deviceset="C-US" device="C0603K" value="10uF"/>
 <part name="GND4" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
 <part name="GND3" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
-<part name="C101" library="adafruit" deviceset="CPOL-US" device="D" value="220uF"/>
+<part name="C101" library="adafruit" deviceset="CPOL-US" device="E" value="220uF"/>
 </parts>
 <sheets>
 <sheet>
