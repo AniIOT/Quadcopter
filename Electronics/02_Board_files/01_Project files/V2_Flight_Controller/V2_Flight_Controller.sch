@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE eagle SYSTEM "eagle.dtd">
-<eagle version="9.4.2">
+<eagle version="9.5.1">
 <drawing>
 <settings>
 <setting alwaysvectorfont="no"/>
@@ -19461,6 +19461,7 @@ Typical applications:&lt;p&gt;
 <port name="+3V3" side="top" coord="0" direction="pwr"/>
 <port name="GND" side="bottom" coord="0" direction="pwr"/>
 <port name="BATTERY_+VE" side="right" coord="-2.54" direction="in"/>
+<port name="ESP_RST" side="right" coord="-5.08" direction="out"/>
 </ports>
 <variantdefs>
 </variantdefs>
@@ -19659,9 +19660,9 @@ Typical applications:&lt;p&gt;
 </net>
 <net name="PWM_PIN1" class="0">
 <segment>
-<pinref part="U301" gate="G$1" pin="PA9"/>
-<wire x1="53.34" y1="114.3" x2="50.8" y2="114.3" width="0.1524" layer="91"/>
-<label x="50.8" y="114.3" size="0.8128" layer="95" font="vector" rot="R180" xref="yes"/>
+<wire x1="116.84" y1="127" x2="114.3" y2="127" width="0.1524" layer="91"/>
+<pinref part="U301" gate="G$1" pin="PB4"/>
+<label x="116.84" y="127" size="0.8128" layer="95" font="vector" xref="yes"/>
 </segment>
 </net>
 <net name="USART1_TX" class="0">
@@ -19680,16 +19681,16 @@ Typical applications:&lt;p&gt;
 </net>
 <net name="I2C1_SCL" class="0">
 <segment>
-<pinref part="U301" gate="G$1" pin="PB6"/>
-<label x="116.84" y="121.92" size="0.8128" layer="95" font="vector" xref="yes"/>
-<wire x1="114.3" y1="121.92" x2="116.84" y2="121.92" width="0.1524" layer="91"/>
+<wire x1="50.8" y1="114.3" x2="53.34" y2="114.3" width="0.1524" layer="91"/>
+<pinref part="U301" gate="G$1" pin="PA9"/>
+<label x="50.8" y="114.3" size="0.8128" layer="95" font="vector" rot="R180" xref="yes"/>
 </segment>
 </net>
 <net name="I2C1_SDA" class="0">
 <segment>
-<pinref part="U301" gate="G$1" pin="PB7"/>
-<label x="116.84" y="119.38" size="0.8128" layer="95" font="vector" xref="yes"/>
-<wire x1="114.3" y1="119.38" x2="116.84" y2="119.38" width="0.1524" layer="91"/>
+<wire x1="50.8" y1="111.76" x2="53.34" y2="111.76" width="0.1524" layer="91"/>
+<pinref part="U301" gate="G$1" pin="PA10"/>
+<label x="50.8" y="111.76" size="0.8128" layer="95" font="vector" rot="R180" xref="yes"/>
 </segment>
 </net>
 <net name="BATTERY_+VE" class="0">
@@ -19713,13 +19714,6 @@ Typical applications:&lt;p&gt;
 <label x="50.8" y="104.14" size="0.8128" layer="95" font="vector" rot="R180" xref="yes"/>
 </segment>
 </net>
-<net name="IMU_INT" class="0">
-<segment>
-<wire x1="53.34" y1="127" x2="50.8" y2="127" width="0.1524" layer="91"/>
-<pinref part="U301" gate="G$1" pin="PA4"/>
-<label x="50.8" y="127" size="0.8128" layer="95" font="vector" rot="R180" xref="yes"/>
-</segment>
-</net>
 <net name="BAT_MON" class="0">
 <segment>
 <pinref part="R302" gate="G$1" pin="1"/>
@@ -19728,9 +19722,9 @@ Typical applications:&lt;p&gt;
 <label x="144.78" y="139.7" size="0.8128" layer="95" font="vector" rot="R270" xref="yes"/>
 </segment>
 <segment>
-<wire x1="116.84" y1="132.08" x2="114.3" y2="132.08" width="0.1524" layer="91"/>
-<pinref part="U301" gate="G$1" pin="PB1"/>
-<label x="116.84" y="132.08" size="0.8128" layer="95" font="vector" xref="yes"/>
+<wire x1="53.34" y1="124.46" x2="50.8" y2="124.46" width="0.1524" layer="91"/>
+<pinref part="U301" gate="G$1" pin="PA5"/>
+<label x="50.8" y="124.46" size="0.8128" layer="95" font="vector" rot="R180" xref="yes"/>
 </segment>
 </net>
 <net name="+3V3" class="0">
@@ -19840,23 +19834,37 @@ Typical applications:&lt;p&gt;
 </net>
 <net name="PWM_PIN2" class="0">
 <segment>
-<pinref part="U301" gate="G$1" pin="PA11"/>
-<wire x1="50.8" y1="109.22" x2="53.34" y2="109.22" width="0.1524" layer="91"/>
-<label x="50.8" y="109.22" size="0.8128" layer="95" font="vector" rot="R180" xref="yes"/>
+<wire x1="114.3" y1="132.08" x2="116.84" y2="132.08" width="0.1524" layer="91"/>
+<pinref part="U301" gate="G$1" pin="PB1"/>
+<label x="116.84" y="132.08" size="0.8128" layer="95" font="vector" xref="yes"/>
 </segment>
 </net>
 <net name="PWM_PIN4" class="0">
 <segment>
-<pinref part="U301" gate="G$1" pin="PA10"/>
-<wire x1="53.34" y1="111.76" x2="50.8" y2="111.76" width="0.1524" layer="91"/>
-<label x="50.8" y="111.76" size="0.8128" layer="95" font="vector" rot="R180" xref="yes"/>
+<wire x1="116.84" y1="124.46" x2="114.3" y2="124.46" width="0.1524" layer="91"/>
+<pinref part="U301" gate="G$1" pin="PB5"/>
+<label x="116.84" y="124.46" size="0.8128" layer="95" font="vector" xref="yes"/>
 </segment>
 </net>
 <net name="PWM_PIN3" class="0">
 <segment>
-<pinref part="U301" gate="G$1" pin="PA8"/>
-<wire x1="53.34" y1="116.84" x2="50.8" y2="116.84" width="0.1524" layer="91"/>
-<label x="50.8" y="116.84" size="0.8128" layer="95" font="vector" rot="R180" xref="yes"/>
+<wire x1="116.84" y1="134.62" x2="114.3" y2="134.62" width="0.1524" layer="91"/>
+<pinref part="U301" gate="G$1" pin="PB0"/>
+<label x="116.84" y="134.62" size="0.8128" layer="95" font="vector" xref="yes"/>
+</segment>
+</net>
+<net name="IMU_INT" class="0">
+<segment>
+<pinref part="U301" gate="G$1" pin="PA4"/>
+<wire x1="53.34" y1="127" x2="50.8" y2="127" width="0.1524" layer="91"/>
+<label x="50.8" y="127" size="0.8128" layer="95" font="vector" rot="R180" xref="yes"/>
+</segment>
+</net>
+<net name="ESP_RST" class="0">
+<segment>
+<pinref part="U301" gate="G$1" pin="PB7"/>
+<wire x1="114.3" y1="119.38" x2="116.84" y2="119.38" width="0.1524" layer="91"/>
+<label x="116.84" y="119.38" size="0.8128" layer="95" font="vector" xref="yes"/>
 </segment>
 </net>
 </nets>
@@ -20006,7 +20014,7 @@ Typical applications:&lt;p&gt;
 <ports>
 <port name="GND" side="bottom" coord="0" direction="pwr"/>
 <port name="B+" side="right" coord="2.54" direction="io"/>
-<port name="B-" side="right" coord="-2.54" direction="in"/>
+<port name="B-" side="right" coord="-2.54" direction="io"/>
 <port name="+5V" side="top" coord="0" direction="pwr"/>
 </ports>
 <variantdefs>
@@ -20297,6 +20305,7 @@ Typical applications:&lt;p&gt;
 <port name="ESP8266_RXD" side="right" coord="2.54" direction="in"/>
 <port name="+3V3" side="top" coord="0" direction="pwr"/>
 <port name="GND" side="bottom" coord="0" direction="pwr"/>
+<port name="RST_ESP8266" side="left" coord="5.08" direction="in"/>
 </ports>
 <variantdefs>
 </variantdefs>
@@ -21566,8 +21575,9 @@ Typical applications:&lt;p&gt;
 <label x="99.06" y="144.78" size="0.8128" layer="95" font="vector" rot="R180" xref="yes"/>
 </segment>
 <segment>
-<wire x1="175.26" y1="149.86" x2="172.72" y2="149.86" width="0.1524" layer="91"/>
 <label x="172.72" y="149.86" size="0.8128" layer="95" font="vector" rot="R180" xref="yes"/>
+<portref moduleinst="05_SENSOR" port="SDA"/>
+<wire x1="175.26" y1="149.86" x2="172.72" y2="149.86" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="I2C_SCL" class="0">
@@ -21577,18 +21587,21 @@ Typical applications:&lt;p&gt;
 <label x="99.06" y="142.24" size="0.8128" layer="95" font="vector" rot="R180" xref="yes"/>
 </segment>
 <segment>
-<wire x1="175.26" y1="152.4" x2="172.72" y2="152.4" width="0.1524" layer="91"/>
 <label x="172.72" y="152.4" size="0.8128" layer="95" font="vector" rot="R180" xref="yes"/>
+<portref moduleinst="05_SENSOR" port="SCL"/>
+<wire x1="175.26" y1="152.4" x2="172.72" y2="152.4" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="IMU_INT" class="0">
 <segment>
-<wire x1="149.86" y1="142.24" x2="147.32" y2="142.24" width="0.1524" layer="91"/>
 <label x="149.86" y="142.24" size="0.8128" layer="95" font="vector" xref="yes"/>
+<portref moduleinst="03_MICROCONTROLLER" port="IMU_INT"/>
+<wire x1="147.32" y1="142.24" x2="149.86" y2="142.24" width="0.1524" layer="91"/>
 </segment>
 <segment>
-<wire x1="175.26" y1="147.32" x2="172.72" y2="147.32" width="0.1524" layer="91"/>
 <label x="172.72" y="147.32" size="0.8128" layer="95" font="vector" rot="R180" xref="yes"/>
+<portref moduleinst="05_SENSOR" port="IMU_INT"/>
+<wire x1="175.26" y1="147.32" x2="172.72" y2="147.32" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="SWDIO" class="0">
@@ -21721,6 +21734,18 @@ Typical applications:&lt;p&gt;
 <portref moduleinst="06_MOTOR_CONTROL" port="M4_PWM"/>
 <wire x1="172.72" y1="88.9" x2="175.26" y2="88.9" width="0.1524" layer="91"/>
 <label x="172.72" y="88.9" size="0.8128" layer="95" font="vector" rot="R180" xref="yes"/>
+</segment>
+</net>
+<net name="WIFI_RST" class="0">
+<segment>
+<portref moduleinst="04_WIFI" port="RST_ESP8266"/>
+<wire x1="101.6" y1="101.6" x2="99.06" y2="101.6" width="0.1524" layer="91"/>
+<label x="99.06" y="101.6" size="0.8128" layer="95" font="vector" rot="R180" xref="yes"/>
+</segment>
+<segment>
+<portref moduleinst="03_MICROCONTROLLER" port="ESP_RST"/>
+<wire x1="147.32" y1="144.78" x2="149.86" y2="144.78" width="0.1524" layer="91"/>
+<label x="149.86" y="144.78" size="0.8128" layer="95" font="vector" xref="yes"/>
 </segment>
 </net>
 </nets>
