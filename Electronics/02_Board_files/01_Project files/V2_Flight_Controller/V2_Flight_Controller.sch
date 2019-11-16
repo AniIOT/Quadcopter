@@ -15334,7 +15334,7 @@ The author not responsible for any damages or errors!.&lt;p&gt;
 <pin name="GPIO0" x="10.16" y="-2.54" length="middle" rot="R180"/>
 <pin name="GPIO4" x="10.16" y="0" length="middle" rot="R180"/>
 <pin name="GPIO5" x="10.16" y="2.54" length="middle" rot="R180"/>
-<pin name="RXD" x="10.16" y="5.08" length="middle" rot="R180"/>
+<pin name="RXD" x="10.16" y="5.08" length="middle" direction="in" rot="R180"/>
 <pin name="TXD" x="10.16" y="7.62" length="middle" rot="R180"/>
 <pin name="REST" x="-22.86" y="7.62" length="middle"/>
 <pin name="ADC" x="-22.86" y="5.08" length="middle"/>
@@ -15448,8 +15448,6 @@ The author not responsible for any damages or errors!.&lt;p&gt;
 <smd name="22" x="-0.25" y="2.0462" dx="0.8662" dy="0.26" layer="1" rot="R270"/>
 <smd name="23" x="-0.75" y="2.0462" dx="0.8662" dy="0.26" layer="1" rot="R270"/>
 <smd name="24" x="-1.25" y="2.0462" dx="0.8662" dy="0.26" layer="1" rot="R270"/>
-<rectangle x1="-1.5" y1="-1.5" x2="1.5" y2="1.5" layer="41"/>
-<rectangle x1="-1.5" y1="-1.5" x2="1.5" y2="1.5" layer="42"/>
 </package>
 </packages>
 <symbols>
@@ -15881,10 +15879,10 @@ Micro-USB AB Receptacle, Bottom Mount, SMT, Lead-Free&lt;/a&gt; (&lt;a href="htt
 <wire x1="3.425" y1="-2.575" x2="2.575" y2="-2.575" width="0" layer="46"/>
 <wire x1="2.575" y1="-2.575" x2="2.575" y2="-1.875" width="0" layer="46"/>
 <wire x1="2.575" y1="-1.875" x2="3.425" y2="-1.875" width="0" layer="46"/>
-<pad name="CASING2" x="0" y="-4.175" drill="0.6" diameter="0.95" shape="long" thermals="no"/>
-<pad name="CASING1" x="0" y="4.175" drill="0.6" diameter="0.95" shape="long" thermals="no"/>
-<pad name="CASING3" x="3" y="2.225" drill="0.7" diameter="1.1" shape="long"/>
-<pad name="CASING4" x="3" y="-2.225" drill="0.7" diameter="1.1" shape="long"/>
+<pad name="CASING2" x="0" y="-4.175" drill="0.6" diameter="0.95" shape="long"/>
+<pad name="CASING1" x="0" y="4.175" drill="0.6" diameter="0.95" shape="long"/>
+<pad name="CASING3" x="3" y="2.236" drill="0.7" diameter="1.1" shape="long"/>
+<pad name="CASING4" x="3" y="-2.22" drill="0.7" diameter="1.1" shape="long"/>
 <smd name="5" x="2.8" y="-1.3" dx="1.35" dy="0.4" layer="1"/>
 <smd name="4" x="2.8" y="-0.65" dx="1.35" dy="0.4" layer="1"/>
 <smd name="3" x="2.8" y="0" dx="1.35" dy="0.4" layer="1"/>
@@ -19432,6 +19430,33 @@ Typical applications:&lt;p&gt;
 </deviceset>
 </devicesets>
 </library>
+<library name="NC">
+<packages>
+</packages>
+<symbols>
+<symbol name="NC">
+<wire x1="-0.635" y1="-0.635" x2="0.635" y2="0.635" width="0.1524" layer="94"/>
+<wire x1="-0.635" y1="0.635" x2="0.635" y2="-0.635" width="0.1524" layer="94"/>
+<pin name="P$1" x="0" y="0" length="point"/>
+</symbol>
+</symbols>
+<devicesets>
+<deviceset name="NC">
+<gates>
+<gate name="G$1" symbol="NC" x="0" y="0"/>
+</gates>
+<devices>
+<device name="">
+<technologies>
+<technology name="">
+<attribute name="_EXTERNAL_" value="" constant="no"/>
+</technology>
+</technologies>
+</device>
+</devices>
+</deviceset>
+</devicesets>
+</library>
 </libraries>
 <attributes>
 </attributes>
@@ -19456,8 +19481,8 @@ Typical applications:&lt;p&gt;
 <port name="I2C1_SCL" side="left" coord="-7.62" direction="io"/>
 <port name="I2C1_SDA" side="left" coord="-5.08" direction="io"/>
 <port name="USART1_TX" side="left" coord="0" direction="out"/>
-<port name="USART1_RX" side="left" coord="-2.54" direction="in"/>
-<port name="IMU_INT" side="right" coord="-7.62" direction="in"/>
+<port name="USART1_RX" side="left" coord="-2.54" direction="io"/>
+<port name="IMU_INT" side="right" coord="-7.62" direction="io"/>
 <port name="+3V3" side="top" coord="0" direction="pwr"/>
 <port name="GND" side="bottom" coord="0" direction="pwr"/>
 <port name="BATTERY_+VE" side="right" coord="-2.54" direction="in"/>
@@ -19466,15 +19491,15 @@ Typical applications:&lt;p&gt;
 <variantdefs>
 </variantdefs>
 <parts>
-<part name="FRAME3" library="frames" library_urn="urn:adsk.eagle:library:229" deviceset="LETTER_L" device=""/>
+<part name="FRAME3" library="frames" library_urn="urn:adsk.eagle:library:229" deviceset="LETTER_L" device="" value="MICROCONTROLLER"/>
 <part name="U301" library="STM32F030K6T6" deviceset="STM32F030K6T6" device=""/>
 <part name="C304" library="adafruit" deviceset="C-US" device="C0603" value="10nF"/>
 <part name="C305" library="adafruit" deviceset="C-US" device="C0603" value="1uF"/>
 <part name="C301" library="adafruit" deviceset="C-US" device="C0603" value="100nF"/>
 <part name="C302" library="adafruit" deviceset="C-US" device="C0603" value="100nF"/>
 <part name="C303" library="adafruit" deviceset="C-US" device="C0603" value="4.7uF"/>
-<part name="L302" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="L-US" device="L2012C" package3d_urn="urn:adsk.eagle:package:23475/2"/>
-<part name="L303" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="L-US" device="L2012C" package3d_urn="urn:adsk.eagle:package:23475/2"/>
+<part name="L302" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="L-US" device="L2012C" package3d_urn="urn:adsk.eagle:package:23475/2" value="FERRITE BEAD"/>
+<part name="L303" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="L-US" device="L2012C" package3d_urn="urn:adsk.eagle:package:23475/2" value="FERRITE BEAD"/>
 <part name="R301" library="adafruit" deviceset="R-US_" device="R0603" value="10KΩ"/>
 <part name="C306" library="adafruit" deviceset="C-US" device="C0603" value="20pF"/>
 <part name="C307" library="adafruit" deviceset="C-US" device="C0603" value="20pF"/>
@@ -19530,11 +19555,11 @@ Typical applications:&lt;p&gt;
 </instance>
 <instance part="L302" gate="G$1" x="132.08" y="68.58" smashed="yes" rot="R90">
 <attribute name="NAME" x="137.16" y="72.39" size="1.778" layer="95" rot="R180"/>
-<attribute name="VALUE" x="137.16" y="72.39" size="1.778" layer="96" rot="R180"/>
+<attribute name="VALUE" x="129.54" y="72.39" size="1.778" layer="96" rot="R180"/>
 </instance>
 <instance part="L303" gate="G$1" x="132.08" y="66.04" smashed="yes" rot="R90">
 <attribute name="NAME" x="137.16" y="64.77" size="1.778" layer="95" rot="R180"/>
-<attribute name="VALUE" x="137.16" y="69.85" size="1.778" layer="96" rot="R180"/>
+<attribute name="VALUE" x="129.54" y="64.77" size="1.778" layer="96" rot="R180"/>
 </instance>
 <instance part="R301" gate="G$1" x="132.08" y="55.88" smashed="yes">
 <attribute name="NAME" x="128.27" y="57.3786" size="1.778" layer="95"/>
@@ -19873,18 +19898,18 @@ Typical applications:&lt;p&gt;
 </module>
 <module name="3V3_BUCK_CONVERTER" prefix="" dx="15.24" dy="15.24">
 <ports>
-<port name="VIN" side="left" coord="5.08" direction="in"/>
+<port name="VIN" side="left" coord="5.08" direction="pwr"/>
 <port name="3.3V" side="right" coord="5.08" direction="pwr"/>
 <port name="GND" side="bottom" coord="0" direction="pwr"/>
 </ports>
 <variantdefs>
 </variantdefs>
 <parts>
-<part name="FRAME1" library="frames" library_urn="urn:adsk.eagle:library:229" deviceset="LETTER_L" device=""/>
+<part name="FRAME1" library="frames" library_urn="urn:adsk.eagle:library:229" deviceset="LETTER_L" device="" value="3V3_BUCK_CONVERTER"/>
 <part name="U201" library="smd-footprints" deviceset="LM3670" device=""/>
-<part name="C201" library="adafruit" deviceset="C-US" device="C0603K"/>
-<part name="C202" library="adafruit" deviceset="C-US" device="C0603K"/>
-<part name="R201" library="adafruit" deviceset="R-US_" device="R0603"/>
+<part name="C201" library="adafruit" deviceset="C-US" device="C0603K" value="10nF"/>
+<part name="C202" library="adafruit" deviceset="C-US" device="C0603K" value="10uF"/>
+<part name="R201" library="adafruit" deviceset="R-US_" device="R0603" value="1KΩ"/>
 <part name="D201" library="adafruit" deviceset="LED" device="CHIPLED_0603" value="GREEN_LED"/>
 <part name="L201" library="SRN2009T-2R2M" deviceset="SRN2009T-2R2M" device=""/>
 <part name="GND1" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
@@ -20020,7 +20045,7 @@ Typical applications:&lt;p&gt;
 <variantdefs>
 </variantdefs>
 <parts>
-<part name="FRAME1" library="frames" library_urn="urn:adsk.eagle:library:229" deviceset="LETTER_L" device=""/>
+<part name="FRAME1" library="frames" library_urn="urn:adsk.eagle:library:229" deviceset="LETTER_L" device="" value="BATTERY_PROTECTION_AND_MONITORING"/>
 <part name="U101" library="tp4056" deviceset="TP4056" device=""/>
 <part name="U102" library="dw01a" deviceset="DW01A" device=""/>
 <part name="T101" library="FS8205A" deviceset="DMN3024LSD" device=""/>
@@ -20169,6 +20194,7 @@ Typical applications:&lt;p&gt;
 <pinref part="D102" gate="G$1" pin="A"/>
 <wire x1="116.84" y1="137.16" x2="86.36" y2="137.16" width="0.1524" layer="91"/>
 <junction x="86.36" y="137.16"/>
+<label x="86.36" y="127" size="0.8128" layer="95" font="vector" rot="R180" xref="yes"/>
 </segment>
 </net>
 <net name="PROG" class="0">
@@ -20278,7 +20304,7 @@ Typical applications:&lt;p&gt;
 <wire x1="121.92" y1="132.08" x2="124.46" y2="132.08" width="0.1524" layer="91"/>
 </segment>
 </net>
-<net name="N$1" class="0">
+<net name="OC" class="0">
 <segment>
 <pinref part="T101" gate="A" pin="G"/>
 <wire x1="185.42" y1="109.22" x2="185.42" y2="111.76" width="0.1524" layer="91"/>
@@ -20287,7 +20313,7 @@ Typical applications:&lt;p&gt;
 <wire x1="198.12" y1="111.76" x2="198.12" y2="114.3" width="0.1524" layer="91"/>
 </segment>
 </net>
-<net name="N$2" class="0">
+<net name="OD" class="0">
 <segment>
 <pinref part="U102" gate="G$1" pin="OD"/>
 <wire x1="193.04" y1="114.3" x2="193.04" y2="109.22" width="0.1524" layer="91"/>
@@ -20305,13 +20331,13 @@ Typical applications:&lt;p&gt;
 <port name="ESP8266_RXD" side="right" coord="2.54" direction="in"/>
 <port name="+3V3" side="top" coord="0" direction="pwr"/>
 <port name="GND" side="bottom" coord="0" direction="pwr"/>
-<port name="RST_ESP8266" side="left" coord="5.08" direction="in"/>
+<port name="RST_ESP8266" side="left" coord="5.08" direction="io"/>
 </ports>
 <variantdefs>
 </variantdefs>
 <parts>
-<part name="U401" library="esp12e" deviceset="ESP8266-12E" device="ESP12E"/>
-<part name="FRAME1" library="frames" library_urn="urn:adsk.eagle:library:229" deviceset="LETTER_L" device=""/>
+<part name="U401" library="esp12e" deviceset="ESP8266-12E" device="ESP12E" value="WIFI_MODULE"/>
+<part name="FRAME1" library="frames" library_urn="urn:adsk.eagle:library:229" deviceset="LETTER_L" device="" value="WIFI"/>
 <part name="R401" library="adafruit" deviceset="R-US_" device="R0603" value="10KΩ"/>
 <part name="R402" library="adafruit" deviceset="R-US_" device="R0603" value="10KΩ"/>
 <part name="R403" library="adafruit" deviceset="R-US_" device="R0603" value="10KΩ"/>
@@ -20542,7 +20568,7 @@ Typical applications:&lt;p&gt;
 <variantdefs>
 </variantdefs>
 <parts>
-<part name="FRAME1" library="frames" library_urn="urn:adsk.eagle:library:229" deviceset="LETTER_L" device=""/>
+<part name="FRAME1" library="frames" library_urn="urn:adsk.eagle:library:229" deviceset="LETTER_L" device="" value="SENSOR"/>
 <part name="U501" library="MPU-6050" deviceset="MPU-6050" device=""/>
 <part name="C504" library="adafruit" deviceset="C-US" device="C0603" value="0.1uF, 2V, ±10%"/>
 <part name="C501" library="adafruit" deviceset="C-US" device="C0603" value="0.1uF, 4V, ±10%"/>
@@ -20559,6 +20585,8 @@ Typical applications:&lt;p&gt;
 <part name="C2" library="adafruit" deviceset="C-US" device="C0603" value="2.2nF, 50V, ±10%"/>
 <part name="GND3" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
 <part name="+3V3" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="+3V3" device=""/>
+<part name="U$1" library="NC" deviceset="NC" device=""/>
+<part name="U$2" library="NC" deviceset="NC" device=""/>
 </parts>
 <sheets>
 <sheet>
@@ -20615,9 +20643,9 @@ Typical applications:&lt;p&gt;
 <attribute name="NAME" x="177.8" y="127.635" size="1.778" layer="95"/>
 <attribute name="VALUE" x="177.8" y="109.22" size="1.778" layer="96"/>
 </instance>
-<instance part="C1" gate="G$1" x="210.82" y="121.92" smashed="yes">
-<attribute name="NAME" x="211.836" y="122.555" size="1.778" layer="95" font="vector"/>
-<attribute name="VALUE" x="214.376" y="120.269" size="1.778" layer="96" font="vector"/>
+<instance part="C1" gate="G$1" x="210.82" y="127" smashed="yes">
+<attribute name="NAME" x="211.836" y="127.635" size="1.778" layer="95" font="vector"/>
+<attribute name="VALUE" x="214.376" y="125.349" size="1.778" layer="96" font="vector"/>
 </instance>
 <instance part="C2" gate="G$1" x="218.44" y="116.84" smashed="yes">
 <attribute name="NAME" x="219.456" y="117.475" size="1.778" layer="95" font="vector"/>
@@ -20626,9 +20654,11 @@ Typical applications:&lt;p&gt;
 <instance part="GND3" gate="1" x="210.82" y="106.68" smashed="yes">
 <attribute name="VALUE" x="208.28" y="104.14" size="1.778" layer="96"/>
 </instance>
-<instance part="+3V3" gate="G$1" x="210.82" y="129.54" smashed="yes">
-<attribute name="VALUE" x="213.36" y="129.54" size="1.778" layer="96"/>
+<instance part="+3V3" gate="G$1" x="210.82" y="132.08" smashed="yes">
+<attribute name="VALUE" x="213.36" y="132.08" size="1.778" layer="96"/>
 </instance>
+<instance part="U$1" gate="G$1" x="81.28" y="129.54" smashed="yes"/>
+<instance part="U$2" gate="G$1" x="81.28" y="106.68" smashed="yes"/>
 </instances>
 <busses>
 </busses>
@@ -20720,13 +20750,13 @@ Typical applications:&lt;p&gt;
 <wire x1="203.2" y1="119.38" x2="218.44" y2="119.38" width="0.1524" layer="91"/>
 <pinref part="U1" gate="G$1" pin="VDD"/>
 <pinref part="C1" gate="G$1" pin="1"/>
-<wire x1="203.2" y1="124.46" x2="210.82" y2="124.46" width="0.1524" layer="91"/>
-<wire x1="218.44" y1="119.38" x2="218.44" y2="124.46" width="0.1524" layer="91"/>
-<wire x1="218.44" y1="124.46" x2="210.82" y2="124.46" width="0.1524" layer="91"/>
+<wire x1="218.44" y1="119.38" x2="218.44" y2="129.54" width="0.1524" layer="91"/>
 <junction x="218.44" y="119.38"/>
-<junction x="210.82" y="124.46"/>
 <pinref part="+3V3" gate="G$1" pin="+3V3"/>
-<wire x1="210.82" y1="127" x2="210.82" y2="124.46" width="0.1524" layer="91"/>
+<wire x1="203.2" y1="124.46" x2="203.2" y2="129.54" width="0.1524" layer="91"/>
+<wire x1="203.2" y1="129.54" x2="210.82" y2="129.54" width="0.1524" layer="91"/>
+<junction x="210.82" y="129.54"/>
+<wire x1="210.82" y1="129.54" x2="218.44" y2="129.54" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="GND" class="0">
@@ -20774,10 +20804,22 @@ Typical applications:&lt;p&gt;
 <wire x1="203.2" y1="111.76" x2="210.82" y2="111.76" width="0.1524" layer="91"/>
 <pinref part="C1" gate="G$1" pin="2"/>
 <wire x1="210.82" y1="111.76" x2="218.44" y2="111.76" width="0.1524" layer="91"/>
-<wire x1="210.82" y1="116.84" x2="210.82" y2="111.76" width="0.1524" layer="91"/>
+<wire x1="210.82" y1="121.92" x2="210.82" y2="111.76" width="0.1524" layer="91"/>
 <junction x="210.82" y="111.76"/>
 <pinref part="GND3" gate="1" pin="GND"/>
 <wire x1="210.82" y1="111.76" x2="210.82" y2="109.22" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="N$1" class="0">
+<segment>
+<pinref part="U501" gate="G$1" pin="AUX_CL"/>
+<pinref part="U$1" gate="G$1" pin="P$1"/>
+</segment>
+</net>
+<net name="N$2" class="0">
+<segment>
+<pinref part="U501" gate="G$1" pin="AUX_DA"/>
+<pinref part="U$2" gate="G$1" pin="P$1"/>
 </segment>
 </net>
 </nets>
@@ -20787,36 +20829,36 @@ Typical applications:&lt;p&gt;
 <module name="MOTOR_CONTROL" prefix="" dx="30.48" dy="20.32">
 <ports>
 <port name="SUPPLY_MOTOR" side="top" coord="0" direction="in"/>
-<port name="M1" side="right" coord="7.62" direction="in"/>
+<port name="M1" side="right" coord="7.62" direction="io"/>
 <port name="M1_PWM" side="left" coord="7.62" direction="in"/>
 <port name="M2_PWM" side="left" coord="2.54" direction="in"/>
 <port name="M3_PWM" side="left" coord="-2.54" direction="in"/>
 <port name="M4_PWM" side="left" coord="-7.62" direction="in"/>
-<port name="M2" side="right" coord="2.54" direction="in"/>
-<port name="M3" side="right" coord="-2.54" direction="in"/>
-<port name="M4" side="right" coord="-7.62" direction="in"/>
+<port name="M2" side="right" coord="2.54" direction="io"/>
+<port name="M3" side="right" coord="-2.54" direction="io"/>
+<port name="M4" side="right" coord="-7.62" direction="io"/>
 <port name="GND" side="bottom" coord="0" direction="pwr"/>
 </ports>
 <variantdefs>
 </variantdefs>
 <parts>
-<part name="FRAME1" library="frames" library_urn="urn:adsk.eagle:library:229" deviceset="LETTER_L" device=""/>
-<part name="Q601" library="adafruit" deviceset="MOSFET-N" device="REFLOW"/>
-<part name="R601" library="adafruit" deviceset="R-US_" device="R0603"/>
-<part name="R602" library="adafruit" deviceset="R-US_" device="R0603"/>
-<part name="Q602" library="adafruit" deviceset="MOSFET-N" device="REFLOW"/>
-<part name="R603" library="adafruit" deviceset="R-US_" device="R0603"/>
-<part name="R604" library="adafruit" deviceset="R-US_" device="R0603"/>
-<part name="Q603" library="adafruit" deviceset="MOSFET-N" device="REFLOW"/>
-<part name="R605" library="adafruit" deviceset="R-US_" device="R0603"/>
-<part name="R606" library="adafruit" deviceset="R-US_" device="R0603"/>
-<part name="Q604" library="adafruit" deviceset="MOSFET-N" device="REFLOW"/>
-<part name="R607" library="adafruit" deviceset="R-US_" device="R0603"/>
-<part name="R608" library="adafruit" deviceset="R-US_" device="R0603"/>
-<part name="D601" library="diode" library_urn="urn:adsk.eagle:library:210" deviceset="DIODE-" device="SOD123" package3d_urn="urn:adsk.eagle:package:43420/1"/>
-<part name="D602" library="diode" library_urn="urn:adsk.eagle:library:210" deviceset="DIODE-" device="SOD123" package3d_urn="urn:adsk.eagle:package:43420/1"/>
-<part name="D603" library="diode" library_urn="urn:adsk.eagle:library:210" deviceset="DIODE-" device="SOD123" package3d_urn="urn:adsk.eagle:package:43420/1"/>
-<part name="D604" library="diode" library_urn="urn:adsk.eagle:library:210" deviceset="DIODE-" device="SOD123" package3d_urn="urn:adsk.eagle:package:43420/1"/>
+<part name="FRAME1" library="frames" library_urn="urn:adsk.eagle:library:229" deviceset="LETTER_L" device="" value="MOTOR_CONTROL"/>
+<part name="Q601" library="adafruit" deviceset="MOSFET-N" device="REFLOW" value="SI2302"/>
+<part name="R601" library="adafruit" deviceset="R-US_" device="R0603" value="1KΩ"/>
+<part name="R602" library="adafruit" deviceset="R-US_" device="R0603" value="4.7KΩ"/>
+<part name="Q602" library="adafruit" deviceset="MOSFET-N" device="REFLOW" value="SI2302"/>
+<part name="R603" library="adafruit" deviceset="R-US_" device="R0603" value="1KΩ"/>
+<part name="R604" library="adafruit" deviceset="R-US_" device="R0603" value="4.7KΩ"/>
+<part name="Q603" library="adafruit" deviceset="MOSFET-N" device="REFLOW" value="SI2302"/>
+<part name="R605" library="adafruit" deviceset="R-US_" device="R0603" value="1KΩ"/>
+<part name="R606" library="adafruit" deviceset="R-US_" device="R0603" value="4.7KΩ"/>
+<part name="Q604" library="adafruit" deviceset="MOSFET-N" device="REFLOW" value="SI2302"/>
+<part name="R607" library="adafruit" deviceset="R-US_" device="R0603" value="1KΩ"/>
+<part name="R608" library="adafruit" deviceset="R-US_" device="R0603" value="4.7KΩ"/>
+<part name="D601" library="diode" library_urn="urn:adsk.eagle:library:210" deviceset="DIODE-" device="SOD123" package3d_urn="urn:adsk.eagle:package:43420/1" value="1N5819"/>
+<part name="D602" library="diode" library_urn="urn:adsk.eagle:library:210" deviceset="DIODE-" device="SOD123" package3d_urn="urn:adsk.eagle:package:43420/1" value="1N5819"/>
+<part name="D603" library="diode" library_urn="urn:adsk.eagle:library:210" deviceset="DIODE-" device="SOD123" package3d_urn="urn:adsk.eagle:package:43420/1" value="1N5819"/>
+<part name="D604" library="diode" library_urn="urn:adsk.eagle:library:210" deviceset="DIODE-" device="SOD123" package3d_urn="urn:adsk.eagle:package:43420/1" value="1N5819"/>
 <part name="GND1" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
 <part name="GND2" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
 <part name="GND3" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
@@ -21104,7 +21146,7 @@ Typical applications:&lt;p&gt;
 <variantdefs>
 </variantdefs>
 <parts>
-<part name="FRAME1" library="frames" library_urn="urn:adsk.eagle:library:229" deviceset="LETTER_L" device=""/>
+<part name="FRAME1" library="frames" library_urn="urn:adsk.eagle:library:229" deviceset="LETTER_L" device="" value="CONNECTORS"/>
 <part name="J701" library="con-molex-usb" deviceset="MICRO-USB-RECEPTACLE" device="47589-0001" value="MICRO-USB"/>
 <part name="GND1" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
 <part name="P+1" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="+5V" device=""/>
@@ -21116,6 +21158,9 @@ Typical applications:&lt;p&gt;
 <part name="X706" library="con-molex_modified" deviceset="53?-05" device="047" package3d_urn="urn:adsk.eagle:package:8078514/1" value="JTAG"/>
 <part name="GND2" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
 <part name="+3V1" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="+3V3" device=""/>
+<part name="U$1" library="NC" deviceset="NC" device=""/>
+<part name="U$2" library="NC" deviceset="NC" device=""/>
+<part name="U$3" library="NC" deviceset="NC" device=""/>
 </parts>
 <sheets>
 <sheet>
@@ -21195,6 +21240,9 @@ Typical applications:&lt;p&gt;
 <instance part="+3V1" gate="G$1" x="149.86" y="165.1" smashed="yes">
 <attribute name="VALUE" x="147.32" y="160.02" size="1.778" layer="96" rot="R90"/>
 </instance>
+<instance part="U$1" gate="G$1" x="35.56" y="152.4" smashed="yes"/>
+<instance part="U$2" gate="G$1" x="35.56" y="149.86" smashed="yes"/>
+<instance part="U$3" gate="G$1" x="35.56" y="147.32" smashed="yes"/>
 </instances>
 <busses>
 </busses>
@@ -21325,13 +21373,31 @@ Typical applications:&lt;p&gt;
 <label x="149.86" y="157.48" size="0.8128" layer="95" font="vector" rot="R180" xref="yes"/>
 </segment>
 </net>
+<net name="N$1" class="0">
+<segment>
+<pinref part="J701" gate="G$1" pin="2"/>
+<pinref part="U$1" gate="G$1" pin="P$1"/>
+</segment>
+</net>
+<net name="N$2" class="0">
+<segment>
+<pinref part="J701" gate="G$1" pin="3"/>
+<pinref part="U$2" gate="G$1" pin="P$1"/>
+</segment>
+</net>
+<net name="N$3" class="0">
+<segment>
+<pinref part="J701" gate="G$1" pin="4"/>
+<pinref part="U$3" gate="G$1" pin="P$1"/>
+</segment>
+</net>
 </nets>
 </sheet>
 </sheets>
 </module>
 </modules>
 <parts>
-<part name="FRAME1" library="frames" library_urn="urn:adsk.eagle:library:229" deviceset="LETTER_L" device=""/>
+<part name="FRAME1" library="frames" library_urn="urn:adsk.eagle:library:229" deviceset="LETTER_L" device="" value="BLOCK_DIAGRAM"/>
 <part name="+3V4" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="+3V3" device=""/>
 <part name="GND4" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
 <part name="GND7" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
@@ -21751,6 +21817,15 @@ Typical applications:&lt;p&gt;
 </nets>
 </sheet>
 </sheets>
+<errors>
+<approved hash="104,1@MICROCONTROLLER,114.3,149.86,U301,VDD,+3V3,,,"/>
+<approved hash="104,1@MICROCONTROLLER,114.3,147.32,U301,VDDA,+3V3,,,"/>
+<approved hash="104,1@MICROCONTROLLER,114.3,96.52,U301,VSS,GND,,,"/>
+<approved hash="104,1@SENSOR,111.76,137.16,U501,VLOGIC,+3V3,,,"/>
+<approved hash="104,1@SENSOR,111.76,139.7,U501,VDD,+3V3,,,"/>
+<approved hash="104,1@SENSOR,203.2,124.46,U1,VDD,+3V3,,,"/>
+<approved hash="104,1@SENSOR,203.2,119.38,U1,VDDIO,+3V3,,,"/>
+</errors>
 </schematic>
 </drawing>
 <compatibility>
