@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE eagle SYSTEM "eagle.dtd">
-<eagle version="9.5.1">
+<eagle version="9.4.2">
 <drawing>
 <settings>
 <setting alwaysvectorfont="no"/>
@@ -20047,13 +20047,13 @@ Typical applications:&lt;p&gt;
 <attribute name="VALUE" x="96.52" y="109.22" size="1.27" layer="96"/>
 </instance>
 <instance part="U102" gate="G$1" x="187.96" y="132.08" smashed="yes"/>
-<instance part="T101" gate="A" x="187.96" y="106.68" smashed="yes" rot="R270">
-<attribute name="VALUE" x="187.96" y="104.14" size="1.778" layer="96" rot="R270"/>
-<attribute name="NAME" x="190.5" y="104.14" size="1.778" layer="95" rot="R270"/>
+<instance part="T101" gate="A" x="187.96" y="104.14" smashed="yes" rot="R270">
+<attribute name="VALUE" x="187.96" y="101.6" size="1.778" layer="96" rot="R270"/>
+<attribute name="NAME" x="190.5" y="101.6" size="1.778" layer="95" rot="R270"/>
 </instance>
-<instance part="T101" gate="B" x="200.66" y="106.68" smashed="yes" rot="MR270">
-<attribute name="VALUE" x="200.66" y="104.14" size="1.778" layer="96" rot="MR270"/>
-<attribute name="NAME" x="198.12" y="104.14" size="1.778" layer="95" rot="MR270"/>
+<instance part="T101" gate="B" x="203.2" y="104.14" smashed="yes" rot="MR270">
+<attribute name="VALUE" x="203.2" y="101.6" size="1.778" layer="96" rot="MR270"/>
+<attribute name="NAME" x="200.66" y="101.6" size="1.778" layer="95" rot="MR270"/>
 </instance>
 <instance part="GND2" gate="1" x="88.9" y="101.6" smashed="yes">
 <attribute name="VALUE" x="86.36" y="99.06" size="1.778" layer="96"/>
@@ -20097,8 +20097,8 @@ Typical applications:&lt;p&gt;
 <attribute name="NAME" x="161.036" y="130.175" size="1.778" layer="95"/>
 <attribute name="VALUE" x="161.036" y="125.349" size="1.778" layer="96"/>
 </instance>
-<instance part="GND4" gate="1" x="210.82" y="101.6" smashed="yes" rot="MR0">
-<attribute name="VALUE" x="213.36" y="99.06" size="1.778" layer="96" rot="MR0"/>
+<instance part="GND4" gate="1" x="210.82" y="99.06" smashed="yes" rot="MR0">
+<attribute name="VALUE" x="213.36" y="96.52" size="1.778" layer="96" rot="MR0"/>
 </instance>
 <instance part="GND3" gate="1" x="160.02" y="119.38" smashed="yes" rot="MR0">
 <attribute name="VALUE" x="162.56" y="116.84" size="1.778" layer="96" rot="MR0"/>
@@ -20130,11 +20130,11 @@ Typical applications:&lt;p&gt;
 <segment>
 <pinref part="R105" gate="G$1" pin="1"/>
 <pinref part="GND4" gate="1" pin="GND"/>
-<wire x1="210.82" y1="114.3" x2="210.82" y2="106.68" width="0.1524" layer="91"/>
+<wire x1="210.82" y1="114.3" x2="210.82" y2="104.14" width="0.1524" layer="91"/>
 <pinref part="T101" gate="B" pin="S"/>
-<wire x1="210.82" y1="106.68" x2="210.82" y2="104.14" width="0.1524" layer="91"/>
-<wire x1="205.74" y1="106.68" x2="210.82" y2="106.68" width="0.1524" layer="91"/>
-<junction x="210.82" y="106.68"/>
+<wire x1="210.82" y1="104.14" x2="210.82" y2="101.6" width="0.1524" layer="91"/>
+<wire x1="208.28" y1="104.14" x2="210.82" y2="104.14" width="0.1524" layer="91"/>
+<junction x="210.82" y="104.14"/>
 </segment>
 <segment>
 <pinref part="GND3" gate="1" pin="GND"/>
@@ -20222,7 +20222,7 @@ Typical applications:&lt;p&gt;
 <segment>
 <pinref part="T101" gate="A" pin="D"/>
 <pinref part="T101" gate="B" pin="D"/>
-<wire x1="193.04" y1="106.68" x2="195.58" y2="106.68" width="0.1524" layer="91"/>
+<wire x1="193.04" y1="104.14" x2="198.12" y2="104.14" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="CS" class="0">
@@ -20254,8 +20254,8 @@ Typical applications:&lt;p&gt;
 </segment>
 <segment>
 <pinref part="T101" gate="A" pin="S"/>
-<wire x1="182.88" y1="106.68" x2="180.34" y2="106.68" width="0.1524" layer="91"/>
-<label x="180.34" y="106.68" size="0.8128" layer="95" font="vector" rot="R180" xref="yes"/>
+<wire x1="182.88" y1="104.14" x2="180.34" y2="104.14" width="0.1524" layer="91"/>
+<label x="180.34" y="104.14" size="0.8128" layer="95" font="vector" rot="R180" xref="yes"/>
 </segment>
 <segment>
 <pinref part="C101" gate="G$1" pin="-"/>
@@ -20263,27 +20263,28 @@ Typical applications:&lt;p&gt;
 <label x="149.86" y="121.92" size="0.8128" layer="95" font="vector" rot="R270" xref="yes"/>
 </segment>
 </net>
-<net name="OD" class="0">
-<segment>
-<pinref part="U102" gate="G$1" pin="OD"/>
-<pinref part="T101" gate="A" pin="G"/>
-<wire x1="193.04" y1="114.3" x2="185.42" y2="114.3" width="0.1524" layer="91"/>
-<wire x1="185.42" y1="114.3" x2="185.42" y2="111.76" width="0.1524" layer="91"/>
-</segment>
-</net>
-<net name="OC" class="0">
-<segment>
-<pinref part="U102" gate="G$1" pin="OC"/>
-<pinref part="T101" gate="B" pin="G"/>
-<wire x1="198.12" y1="114.3" x2="203.2" y2="114.3" width="0.1524" layer="91"/>
-<wire x1="203.2" y1="114.3" x2="203.2" y2="111.76" width="0.1524" layer="91"/>
-</segment>
-</net>
 <net name="STDBY_LED" class="0">
 <segment>
 <pinref part="D101" gate="G$1" pin="C"/>
 <pinref part="R102" gate="G$1" pin="2"/>
 <wire x1="121.92" y1="132.08" x2="124.46" y2="132.08" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="N$1" class="0">
+<segment>
+<pinref part="T101" gate="A" pin="G"/>
+<wire x1="185.42" y1="109.22" x2="185.42" y2="111.76" width="0.1524" layer="91"/>
+<pinref part="U102" gate="G$1" pin="OC"/>
+<wire x1="185.42" y1="111.76" x2="198.12" y2="111.76" width="0.1524" layer="91"/>
+<wire x1="198.12" y1="111.76" x2="198.12" y2="114.3" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="N$2" class="0">
+<segment>
+<pinref part="U102" gate="G$1" pin="OD"/>
+<wire x1="193.04" y1="114.3" x2="193.04" y2="109.22" width="0.1524" layer="91"/>
+<pinref part="T101" gate="B" pin="G"/>
+<wire x1="193.04" y1="109.22" x2="205.74" y2="109.22" width="0.1524" layer="91"/>
 </segment>
 </net>
 </nets>
@@ -21142,19 +21143,19 @@ Typical applications:&lt;p&gt;
 <instance part="X701" gate="-2" x="78.74" y="154.94" smashed="yes">
 <attribute name="NAME" x="81.28" y="154.178" size="1.524" layer="95"/>
 </instance>
-<instance part="X703" gate="-1" x="116.84" y="144.78" smashed="yes">
-<attribute name="NAME" x="119.38" y="144.018" size="1.524" layer="95"/>
-<attribute name="VALUE" x="116.078" y="148.717" size="1.524" layer="96"/>
-</instance>
-<instance part="X703" gate="-2" x="116.84" y="147.32" smashed="yes">
+<instance part="X703" gate="-1" x="116.84" y="147.32" smashed="yes">
 <attribute name="NAME" x="119.38" y="146.558" size="1.524" layer="95"/>
+<attribute name="VALUE" x="116.078" y="151.257" size="1.524" layer="96"/>
 </instance>
-<instance part="X704" gate="-1" x="116.84" y="137.16" smashed="yes">
-<attribute name="NAME" x="119.38" y="136.398" size="1.524" layer="95"/>
-<attribute name="VALUE" x="116.078" y="138.557" size="1.524" layer="96"/>
+<instance part="X703" gate="-2" x="116.84" y="144.78" smashed="yes">
+<attribute name="NAME" x="119.38" y="144.018" size="1.524" layer="95"/>
 </instance>
-<instance part="X704" gate="-2" x="116.84" y="134.62" smashed="yes">
+<instance part="X704" gate="-1" x="116.84" y="134.62" smashed="yes">
 <attribute name="NAME" x="119.38" y="133.858" size="1.524" layer="95"/>
+<attribute name="VALUE" x="116.078" y="136.017" size="1.524" layer="96"/>
+</instance>
+<instance part="X704" gate="-2" x="116.84" y="137.16" smashed="yes">
+<attribute name="NAME" x="119.38" y="136.398" size="1.524" layer="95"/>
 </instance>
 <instance part="X705" gate="-1" x="116.84" y="127" smashed="yes">
 <attribute name="NAME" x="119.38" y="126.238" size="1.524" layer="95"/>
@@ -21235,15 +21236,15 @@ Typical applications:&lt;p&gt;
 <net name="M2" class="0">
 <segment>
 <label x="111.76" y="144.78" size="0.8128" layer="95" font="vector" rot="R180" xref="yes"/>
-<pinref part="X703" gate="-1" pin="S"/>
+<pinref part="X703" gate="-2" pin="S"/>
 <wire x1="114.3" y1="144.78" x2="111.76" y2="144.78" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="M3" class="0">
 <segment>
-<pinref part="X704" gate="-2" pin="S"/>
-<wire x1="114.3" y1="134.62" x2="111.76" y2="134.62" width="0.1524" layer="91"/>
 <label x="111.76" y="134.62" size="0.8128" layer="95" font="vector" rot="R180" xref="yes"/>
+<pinref part="X704" gate="-1" pin="S"/>
+<wire x1="114.3" y1="134.62" x2="111.76" y2="134.62" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="M4" class="0">
@@ -21264,18 +21265,18 @@ Typical applications:&lt;p&gt;
 <wire x1="104.14" y1="157.48" x2="104.14" y2="147.32" width="0.1524" layer="91"/>
 <wire x1="104.14" y1="147.32" x2="104.14" y2="137.16" width="0.1524" layer="91"/>
 <wire x1="104.14" y1="137.16" x2="104.14" y2="127" width="0.1524" layer="91"/>
-<pinref part="X704" gate="-1" pin="S"/>
-<wire x1="114.3" y1="137.16" x2="104.14" y2="137.16" width="0.1524" layer="91"/>
 <junction x="104.14" y="137.16"/>
 <junction x="104.14" y="147.32"/>
 <label x="104.14" y="162.56" size="0.8128" layer="95" font="vector" rot="R90" xref="yes"/>
 <pinref part="X705" gate="-1" pin="S"/>
+<wire x1="114.3" y1="137.16" x2="104.14" y2="137.16" width="0.1524" layer="91"/>
 <wire x1="114.3" y1="147.32" x2="104.14" y2="147.32" width="0.1524" layer="91"/>
 <wire x1="114.3" y1="127" x2="104.14" y2="127" width="0.1524" layer="91"/>
 <junction x="104.14" y="157.48"/>
 <wire x1="114.3" y1="157.48" x2="104.14" y2="157.48" width="0.1524" layer="91"/>
 <pinref part="X702" gate="-2" pin="S"/>
-<pinref part="X703" gate="-2" pin="S"/>
+<pinref part="X703" gate="-1" pin="S"/>
+<pinref part="X704" gate="-2" pin="S"/>
 </segment>
 </net>
 <net name="B-" class="0">
